@@ -26,13 +26,15 @@ int main(int argc, char **argv)
     al_init_acodec_addon();
     al_reserve_samples(5);
     Lexxer lex;
-    std::string str;
-    std::getline(std::cin, str);
-    //lex.generateTokens("output \"Hello, World!\n\"");
-    lex.generateTokens(str);
+    //std::string str;
+    //std::getline(std::cin, str);
+    //lex.generateTokens(str);
+    lex.generateTokens("output \"Hello, World!\n\"");
     Compiler cmp;
+    Robot robo;
     auto f=cmp.compile(lex);
-    f();
+    robo.addFunction("hello", f);
+    robo.executeFunction("hello");
     al_destroy_display(display);
 
     return 0;
