@@ -3,8 +3,10 @@
 
 #include "basicresource.h"
 #include "Compiler.h"
+#include "Entity.h"
 #include "GlobalVariables.h"
 #include "Lexxer.h"
 #include "Parser.h"
+#include "Robot.h"
 
 #endif // RESOURCE_H_INCLUDED

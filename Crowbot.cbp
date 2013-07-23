@@ -127,12 +127,16 @@
 		</Linker>
 		<Unit filename="Compiler.cpp" />
 		<Unit filename="Compiler.h" />
+		<Unit filename="Entity.cpp" />
+		<Unit filename="Entity.h" />
 		<Unit filename="GlobalVariables.cpp" />
 		<Unit filename="GlobalVariables.h" />
 		<Unit filename="Lexxer.cpp" />
 		<Unit filename="Lexxer.h" />
 		<Unit filename="Parser.cpp" />
 		<Unit filename="Parser.h" />
+		<Unit filename="Robot.cpp" />
+		<Unit filename="Robot.h" />
 		<Unit filename="basicresource.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="resource.h" />
