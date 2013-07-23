@@ -7,24 +7,113 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\Crowbot" prefix_auto="1" extension_auto="1" />
+				<Option output="bin\Debug\TBSGW" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj\Debug\" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-std=c++11" />
+					<Add option="-DALLEGRO_STATICLINK" />
+					<Add directory="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\include" />
+					<Add directory="tools\enet\include" />
+					<Add directory="tools" />
 				</Compiler>
+				<Linker>
+					<Add option="-lgcc_eh" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_acodec-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_audio-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libvorbisfile-1.3.2-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libvorbis-1.3.2-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_color-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_dialog-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_font-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_image-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_memfile-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_physfs-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_primitives-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_ttf-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libdumb-0.9.3-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libFLAC-1.2.1-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libfreetype-2.4.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libogg-1.2.1-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libzlib-1.2.5-static-mt.a" />
+					<Add library="tools\enet\enet.lib" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libgdiplus.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libuuid.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libkernel32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libwinmm.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libpsapi.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libopengl32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libglu32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libuser32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libcomdlg32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libgdi32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libshell32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libole32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libadvapi32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libws2_32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libshlwapi.a" />
+					<Add library="tools\openal-soft\lib\Win32\libOpenAL32.dll.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\Crowbot" prefix_auto="1" extension_auto="1" />
+				<Option output="bin\Release\TBSGW" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj\Release\" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-DALLEGRO_STATICLINK" />
+					<Add option="-DNDEBUG" />
+					<Add directory="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\include" />
+					<Add directory="tools\enet\include" />
+					<Add directory="tools" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-lgcc_eh" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_acodec-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_audio-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libvorbisfile-1.3.2-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libvorbis-1.3.2-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_color-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_dialog-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_font-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_image-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_memfile-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_physfs-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_primitives-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\liballegro_ttf-5.0.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libdumb-0.9.3-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libFLAC-1.2.1-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libfreetype-2.4.8-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libogg-1.2.1-static-mt.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\allegro-5.0.8-mingw-4.7.0\lib\libzlib-1.2.5-static-mt.a" />
+					<Add library="tools\enet\enet.lib" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libgdiplus.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libuuid.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libkernel32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libwinmm.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libpsapi.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libopengl32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libglu32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libuser32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libcomdlg32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libgdi32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libshell32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libole32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libadvapi32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libws2_32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libshlwapi.a" />
+					<Add library="tools\openal-soft\lib\Win32\libOpenAL32.dll.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -36,7 +125,11 @@
 			<Add library="user32" />
 			<Add library="kernel32" />
 		</Linker>
+		<Unit filename="GlobalVariables.cpp" />
+		<Unit filename="GlobalVariables.h" />
+		<Unit filename="basicresource.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="resource.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
