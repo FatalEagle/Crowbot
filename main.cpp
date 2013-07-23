@@ -25,6 +25,11 @@ int main(int argc, char **argv)
     al_install_audio();
     al_init_acodec_addon();
     al_reserve_samples(5);
+    Lexxer lex;
+    lex.generateTokens("output \"Hello, World!\n\"");
+    Compiler cmp;
+    auto f=cmp.compile(lex);
+    f();
     al_rest(5.0);
     al_destroy_display(display);
 
