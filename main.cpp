@@ -33,8 +33,13 @@ int main(int argc, char **argv)
     Compiler cmp;
     Robot robo;
     auto f=cmp.compile(lex);
+    lex.generateTokens("output \"Goodbye, World!\n\"");
+    auto g=cmp.compile(lex);
     robo.addFunction("hello", f);
+    robo.addFunction("goodbye", g);
     robo.executeFunction("hello");
+    robo.executeFunction("goodbye");
+    robo.executeFunction("salut");
     al_destroy_display(display);
 
     return 0;

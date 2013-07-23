@@ -7,5 +7,9 @@ void Robot::addFunction(std::string function_name, std::function<void()> functio
 
 void Robot::executeFunction(std::string function_name)
 {
-    robotFunctions[function_name]();
+    auto it=robotFunctions.find(function_name);
+    if(it!=robotFunctions.end())
+    {
+        it->second();
+    }
 }
