@@ -1,0 +1,7 @@
+bin/
+obj/
+idl/bin/
+idl/obj/
+*.depend
+*.layout
+*.o
