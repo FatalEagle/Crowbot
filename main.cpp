@@ -32,14 +32,14 @@ int main(int argc, char **argv)
     lex.generateTokens("output \"Hello, World!\n\"");
     Compiler cmp;
     Robot robo;
-    auto f=cmp.compile(lex);
-    lex.generateTokens("output \"Goodbye, World!\n\"");
-    auto g=cmp.compile(lex);
+    auto f=cmp.compile(lex, &robo);
+    lex.generateTokens("hello() hello()");
+    auto g=cmp.compile(lex, &robo);
     robo.addFunction("hello", f);
-    robo.addFunction("goodbye", g);
+    robo.addFunction("function", g);
     robo.executeFunction("hello");
-    robo.executeFunction("goodbye");
-    robo.executeFunction("salut");
+    robo.executeFunction("function");
+    robo.executeFunction("function");
     al_destroy_display(display);
 
     return 0;

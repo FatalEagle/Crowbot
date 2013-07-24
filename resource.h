@@ -11,5 +11,6 @@
 #include "Parser.h"
 #include "Pixel.h"
 #include "Robot.h"
+#include "SystemFunctions.h"
 
 #endif // RESOURCE_H_INCLUDED
